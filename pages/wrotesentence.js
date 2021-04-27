@@ -32,5 +32,6 @@ export default function WroteSentence(props) {
 
         <h2>You can too!</h2>
         <p>Get Rosetta Stone now!</p>
+        <img src="https://placekitten.com/200/287" />
     </div>
 }
