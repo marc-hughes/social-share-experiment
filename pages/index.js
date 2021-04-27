@@ -1,32 +1,58 @@
+import { useEffect } from 'react';
 import Head from 'next/head'
 
 export default function Home() {
+
+  useEffect(() => {
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src =
+        "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  }, [])
+
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Social Share Experiment</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="/">Social Share Experiment</a>
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Pick a platform
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+
+          <a href="#" className="card">
+            <h3>Facebook</h3>
+            <p>Share an achievement on facebook</p>
+            <div id="fb-root"></div>
+            <div
+              class="fb-share-button"
+              data-href="https://social-share-experiment.vercel.app/wrotesentence"
+              data-layout="button_count"
+            ></div>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
+          <div className="card">
+            <h3>Twitter &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <a class="twitter-share-button"
+              href="https://twitter.com/intent/tweet?text=I%20learned%20to%20write%205%20sentences&url=https://social-share-experiment.vercel.app/wrotesentence"
+              data-size="large">
+              Tweet</a>
+          </div>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
@@ -160,12 +186,6 @@ export default function Home() {
           transition: color 0.15s ease, border-color 0.15s ease;
         }
 
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
 
         .card h3 {
           margin: 0 0 1rem 0;
