@@ -52,7 +52,7 @@ export default function Home() {
 
           <div className="card">
             <h3>Twitter &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <p>Twitter is still a thing, right?</p>
             <a className="twitter-share-button"
               href="https://twitter.com/intent/tweet?text=I%20learned%20to%20write%205%20sentences&url=https://social-share-experiment.vercel.app/wrotesentence"
               data-size="large">
