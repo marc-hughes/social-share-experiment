@@ -13,6 +13,11 @@ export default function Home() {
       js.src =
         "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
       fjs.parentNode.insertBefore(js, fjs);
+
+
+
+
+
     })(document, "script", "facebook-jssdk");
   }, [])
 
@@ -39,7 +44,7 @@ export default function Home() {
             <p>Share an achievement on facebook</p>
             <div id="fb-root"></div>
             <div
-              class="fb-share-button"
+              className="fb-share-button"
               data-href="https://social-share-experiment.vercel.app/wrotesentence"
               data-layout="button_count"
             ></div>
@@ -48,30 +53,38 @@ export default function Home() {
           <div className="card">
             <h3>Twitter &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-            <a class="twitter-share-button"
+            <a className="twitter-share-button"
               href="https://twitter.com/intent/tweet?text=I%20learned%20to%20write%205%20sentences&url=https://social-share-experiment.vercel.app/wrotesentence"
               data-size="large">
               Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
           </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <div
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className="card"
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>LinkedIn &rarr;</h3>
+            <p>Tell colleauges about your success</p>
+            <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="https://social-share-experiment.vercel.app/wrotesentence"></script>
+          </div>
+
+
+
+          <div
+            className="card"
+          >
+            <h3>Instagram &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Can't do it???
             </p>
-          </a>
+          </div>
         </div>
+
+
+
       </main>
 
       <footer>
